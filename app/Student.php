@@ -10,6 +10,7 @@ class Student extends Model
         'name', 'contact', 'email','result','batch_id','course_id',
     ];
 
+
     protected $hidden = [
         'remember_token',
     ];
