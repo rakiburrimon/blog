@@ -14,9 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('student_reg');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/student_reg', 'StudentController@List')-> name('student_reg');
