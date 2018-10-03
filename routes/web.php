@@ -14,12 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('student_reg');
-});
+
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/student_reg', 'StudentController@List')-> name('student_reg');
+Route::get('/student/index', 'StudentController@index')->name('student');
+
+Route::post('/student/create', 'StudentController@create')->name('student.create');
