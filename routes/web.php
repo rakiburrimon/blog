@@ -21,6 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/student/index', 'StudentController@index')->name('student');
+Route::resource('student', 'StudentController');
 
 Route::post('/student/create', 'StudentController@create')->name('student.create');
